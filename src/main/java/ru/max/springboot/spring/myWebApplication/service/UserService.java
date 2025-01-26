@@ -1,9 +1,9 @@
-package ru.max.stringboot.string.myWebApplication.service;
+package ru.max.springboot.spring.myWebApplication.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import ru.max.stringboot.string.myWebApplication.model.User;
-import ru.max.stringboot.string.myWebApplication.repository.UserRepository;
+import ru.max.springboot.spring.myWebApplication.model.User;
+import ru.max.springboot.spring.myWebApplication.repository.UserRepository;
 
 import java.util.List;
 

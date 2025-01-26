@@ -6,7 +6,7 @@
 </head>
 <body>
 <h1>Редактор пользователя</h1>
-<form th:method="POST" th:action="@{/users/{id}(id=${user.id})}" th:object="${user}">
+<form th:method="POST" th:action="@{/{id}(id=${user.id})}" th:object="${user}">
     <div>
 
         <label for="name">Имя:</label>

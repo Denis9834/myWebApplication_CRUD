@@ -1,4 +1,4 @@
-package ru.max.stringboot.string.myWebApplication;
+package ru.max.springboot.spring.myWebApplication;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

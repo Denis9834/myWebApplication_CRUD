@@ -1,7 +1,7 @@
-package ru.max.stringboot.string.myWebApplication.repository;
+package ru.max.springboot.spring.myWebApplication.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import ru.max.stringboot.string.myWebApplication.model.User;
+import ru.max.springboot.spring.myWebApplication.model.User;
 
 public interface UserRepository extends JpaRepository<User, Long> {
 }

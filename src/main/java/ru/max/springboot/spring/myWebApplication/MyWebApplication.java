@@ -1,4 +1,4 @@
-package ru.max.stringboot.string.myWebApplication;
+package ru.max.springboot.spring.myWebApplication;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

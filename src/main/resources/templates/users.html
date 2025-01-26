@@ -6,7 +6,7 @@
 </head>
 <body>
 <h1>Список пользователей</h1>
-<a th:href="@{users/new}">Добавить пользователя</a>
+<a th:href="@{/new}">Добавить пользователя</a>
 <br>
 <table>
     <thead>
@@ -25,14 +25,14 @@
         <td th:text="${user.age}"></td>
 
         <td>
-        <form th:action="@{/users/edit/{id}(id=${user.id})}" method="get">
-            <button type="submit">Update</button>
-        </form>
+            <form th:action="@{/edit/{id}(id=${user.id})}" method="get">
+                <button type="submit">Update</button>
+            </form>
         </td>
         <td>
-        <form th:action="@{/users/delete/{id}(id=${user.id})}" method="get">
-            <button type="submit">Remove</button>
-        </form>
+            <form th:action="@{/delete/{id}(id=${user.id})}" method="get">
+                <button type="submit">Remove</button>
+            </form>
         </td>
 
     </tr>

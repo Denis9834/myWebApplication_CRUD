@@ -1,4 +1,4 @@
-package ru.max.stringboot.string.myWebApplication.model;
+package ru.max.springboot.spring.myWebApplication.model;
 
 import jakarta.persistence.*;
 import lombok.*;
