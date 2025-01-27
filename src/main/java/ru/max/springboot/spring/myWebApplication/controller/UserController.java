@@ -1,8 +1,10 @@
 package ru.max.springboot.spring.myWebApplication.controller;
 
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import ru.max.springboot.spring.myWebApplication.model.User;
 import ru.max.springboot.spring.myWebApplication.service.UserService;
@@ -35,7 +37,11 @@ public class UserController {
     }
 
     @PostMapping("/")
-    public String saveUser(@ModelAttribute("user") User user) {
+    public String saveUser(@ModelAttribute("user") @Valid User user, BindingResult bindingResult) {
+
+        if (bindingResult.hasErrors())
+            return "newUser";
+
         userService.saveUser(user);
         return "redirect:/";
     }
@@ -47,7 +53,12 @@ public class UserController {
     }
 
     @PostMapping("/{id}")
-    public String update(@ModelAttribute("user") User user, @PathVariable("id") long id) {
+    public String update(@ModelAttribute("user") @Valid User user,
+                         BindingResult bindingResult, @PathVariable("id") long id) {
+
+        if (bindingResult.hasErrors())
+            return "edit";
+
         userService.update(id, user);
         return "redirect:/";
     }
